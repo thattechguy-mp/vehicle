@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aldine Storage Vehicle / Trailer / Boat Storage Information Form</title>
+<style>
+:root{--rm-blue:#00A1FB;--rm-blue-dark:#5E85C4;--rm-green:#89F895;--hero-end:#241f51;--ink:#101828;--muted:#667085;--line:#d0d5dd;--panel:#ffffff;--danger:#b42318;--orange:#fb923c}
+*{box-sizing:border-box} body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eef2f7 0%,#f8fafc 100%);color:var(--ink)}
+.shell{max-width:1040px;margin:0 auto;padding:22px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 10px 30px rgba(16,24,40,.08)}
+.hero{padding:26px 24px;background:linear-gradient(135deg,var(--rm-blue) 0%,var(--rm-blue-dark) 52%,var(--hero-end) 100%);color:#fff}.hero img{max-width:190px;height:auto;display:block;border:0}
+.badge{display:inline-block;margin-top:14px;background:var(--rm-green);color:#102a43;font-size:12px;font-weight:700;padding:8px 14px;border-radius:999px;letter-spacing:.3px;text-transform:uppercase}
+.hero h1{margin:12px 0 8px;font-size:34px;line-height:1.08}.hero p{margin:0;max-width:860px;font-size:16px;line-height:1.7;color:#eff6ff}
+.content{padding:24px}.notice{background:#fff7ed;border:1px solid #fed7aa;border-left:5px solid var(--orange);padding:16px 18px;border-radius:12px;font-size:15px;line-height:1.7;color:#344054;margin-bottom:20px}
+.legal-box{background:#f8fbff;border:1px solid #cfe7f8;border-left:5px solid var(--rm-blue);padding:16px 18px;border-radius:12px;font-size:14px;line-height:1.75;color:#344054}
+.danger-box{background:#fef3f2;border:1px solid #fecdca;border-left:5px solid var(--danger);padding:16px 18px;border-radius:12px;font-size:14px;line-height:1.75;color:#7a271a}
+.section{margin:24px 0 8px;font-size:14px;font-weight:700;color:#21406f;display:flex;align-items:center;gap:10px}.section::before{content:"";width:12px;height:12px;border-radius:999px;background:linear-gradient(135deg,var(--rm-green),var(--rm-blue));box-shadow:0 0 0 4px rgba(0,161,251,.1)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.full{grid-column:1/-1}.three{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}.name-grid{display:grid;grid-template-columns:1.2fr .5fr 1.2fr;gap:16px}.address-grid{display:grid;grid-template-columns:1.2fr 1.2fr .8fr .7fr;gap:16px}
+label{display:block;font-size:14px;font-weight:700;margin:0 0 8px;color:#344054} input,select,textarea{width:100%;padding:14px 14px;border:1px solid var(--line);border-radius:12px;font-size:16px;background:#fff;color:var(--ink)}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--rm-blue);box-shadow:0 0 0 4px rgba(0,161,251,.12)} textarea{min-height:100px;resize:vertical}
+.help{font-size:12px;color:var(--muted);line-height:1.6;margin-top:6px}.req{color:var(--danger)}
+.actions{display:flex;gap:12px;align-items:center;justify-content:flex-end;margin-top:20px;flex-wrap:wrap} button{border:0;border-radius:12px;padding:15px 22px;font-size:16px;font-weight:700;cursor:pointer}
+.btn-secondary{background:#e5e7eb;color:#111827}.btn-primary{background:var(--rm-blue);color:#fff;box-shadow:0 8px 18px rgba(0,161,251,.25)} .btn-primary[disabled]{opacity:.6;cursor:not-allowed}
+.check-row,.radio-row{display:flex;gap:10px;align-items:flex-start;padding:14px;border:1px solid #d0d5dd;border-radius:12px;background:#fcfcfd}.check-row input[type="checkbox"],.radio-row input[type="radio"]{width:auto;margin-top:3px;transform:scale(1.15)}.check-row label,.radio-row label{margin:0;font-weight:400;line-height:1.7}
+.split-methods{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px}.method-card{display:flex;gap:10px;align-items:flex-start;padding:16px;border:1px solid var(--line);border-radius:14px;background:#fff;cursor:pointer}.method-card input[type="radio"]{width:auto;margin-top:3px;transform:scale(1.15)}.method-card strong{display:block;font-size:16px;color:#111827}.method-card span{display:block;font-size:12px;color:var(--muted);line-height:1.5;margin-top:2px}.method-card.active{border-color:var(--rm-blue);box-shadow:0 0 0 4px rgba(0,161,251,.12)}
+.upload-card{padding:16px;border:1px solid #d0d5dd;border-radius:14px;background:#fff}
+.signature-pad-wrap{border:1px solid var(--line);border-radius:14px;padding:14px;background:#f8fafc}.signature-pad{width:100%;height:210px;background:#fff;border:1px dashed #98a2b3;border-radius:12px;touch-action:none;display:block}.sig-actions{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-top:10px;flex-wrap:wrap}.sig-note{font-size:12px;color:var(--muted);line-height:1.6}
+.status{display:none;margin-top:18px;padding:14px 16px;border-radius:12px;font-size:14px;line-height:1.6}.status.ok{display:block;background:#ecfdf3;border:1px solid #abefc6;color:#027a48}.status.err{display:block;background:#fef3f2;border:1px solid #fecdca;color:#b42318}
+.modal-backdrop{position:fixed;inset:0;background:rgba(15,23,42,.65);display:none;align-items:center;justify-content:center;padding:18px;z-index:9999}.modal{max-width:560px;width:100%;background:#fff;border-radius:18px;border:1px solid #d0d5dd;box-shadow:0 20px 60px rgba(0,0,0,.25);overflow:hidden}.modal-head{padding:20px 22px;background:linear-gradient(135deg,var(--rm-blue) 0%,var(--rm-blue-dark) 58%,var(--hero-end) 100%);color:#fff}.modal-body{padding:22px;color:#344054;font-size:15px;line-height:1.75}.modal-actions{display:flex;justify-content:flex-end;gap:12px;padding:0 22px 22px}
+.footer{margin-top:16px;text-align:center;font-size:12px;color:#667085;line-height:1.8}.footer-logo{display:block;margin:8px auto 0;max-width:160px;height:auto;width:auto}.hidden{display:none!important}
+@media (max-width:900px){.grid,.three,.name-grid,.address-grid,.split-methods{grid-template-columns:1fr}.actions{justify-content:stretch}.actions button{width:100%}.hero h1{font-size:28px}}
+</style>
+</head>
+<body>
+<div class="shell"><div class="card">
+<div class="hero">
+<img src="https://res.cloudinary.com/aldine/image/upload/v1663433242/Right_Move_logo_9-1-2022_.png" alt="Right Move Storage">
+<div class="badge">Aldine Storage - Vehicle Storage Intake</div>
+<h1>Vehicle, Trailer, or Boat Storage Information Form</h1>
+<p>Use this form to provide the required ownership, identification, insurance, and supporting documents needed before a vehicle, trailer, or boat can be stored under the related TSSA Vehicle, Trailer, or Boat Self-Storage Rental Agreement.</p>
+</div>
+
+<div class="content">
+<div class="notice">This form is for lawful storage intake only. If you are not the registered owner, or if the required ownership and insurance documents do not support the rental, the rental cannot be completed and you must contact the office.</div>
+<div class="legal-box" style="margin-bottom:20px;"><strong>Why this information is required:</strong> Information collected on this form is requested to verify ownership or lawful authority to store the property, to document the identity and contact information of the renter, to support the related TSSA Vehicle, Trailer, or Boat Self-Storage Rental Agreement, and to reduce disputes involving title, registration, insurance, possession, and removal of the stored property. If the name on the supporting documents does not match the renter information provided, the rental cannot be completed until the discrepancy is resolved with the office.</div>
+
+<form id="vehicleStorageForm">
+<div class="grid">
+<div class="full section">Ownership eligibility</div>
+<div class="full"><div class="radio-row"><input id="ownerYes" type="radio" name="isRegisteredOwner" value="Yes" required checked><label for="ownerYes">Yes. I am the registered owner of the vehicle, trailer, or boat being stored.</label></div></div>
+<div class="full"><div class="radio-row"><input id="ownerNo" type="radio" name="isRegisteredOwner" value="No"><label for="ownerNo">No. I am not the registered owner.</label></div></div>
+<div class="full hidden" id="ownerBlockNotice"><div class="danger-box"><strong>This form cannot be completed legally if you are not the registered owner.</strong> Please stop here and contact the office before continuing.</div></div>
+
+<div class="full section">Stored property</div>
+<div class="full split-methods">
+<label class="method-card active" id="typeVehicleCard"><input type="radio" name="storedItemType" value="Vehicle" checked><div><strong>Vehicle</strong><span>Passenger vehicle, car, SUV, or truck.</span></div></label>
+<label class="method-card" id="typeTrailerCard"><input type="radio" name="storedItemType" value="Trailer"><div><strong>Trailer</strong><span>Utility trailer, enclosed trailer, etc.</span></div></label>
+<label class="method-card" id="typeBoatCard"><input type="radio" name="storedItemType" value="Boat"><div><strong>Boat</strong><span>Boat or personal watercraft on trailer.</span></div></label>
+</div>
+
+<div class="full section">Customer information</div>
+<div class="full name-grid">
+<div><label for="firstName">First Name <span class="req">*</span></label><input id="firstName" name="firstName" type="text" required autocomplete="given-name"></div>
+<div><label for="middleInitial">Middle Initial</label><input id="middleInitial" name="middleInitial" type="text" maxlength="1" autocomplete="additional-name"></div>
+<div><label for="lastName">Last Name <span class="req">*</span></label><input id="lastName" name="lastName" type="text" required autocomplete="family-name"></div>
+</div>
+
+<div><label for="dob">Date of Birth <span class="req">*</span></label><input id="dob" name="dob" type="date" required></div>
+<div><label for="driverLicenseNumber">Driver License Number <span class="req">*</span></label><input id="driverLicenseNumber" name="driverLicenseNumber" type="text" required></div>
+<div><label for="licenseState">License State <span class="req">*</span></label><input id="licenseState" name="licenseState" type="text" maxlength="2" placeholder="TX" required><div class="help">Enter the two-letter state abbreviation.</div></div>
+<div><label for="email">Email Address <span class="req">*</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
+
+<div><label for="mobileNumber">Mobile Number <span class="req">*</span></label><input id="mobileNumber" name="mobileNumber" type="tel" required placeholder="(281)233-0400" autocomplete="tel"></div>
+<div class="full"><div class="check-row"><input id="smsOptIn" name="smsOptIn" type="checkbox" value="Yes" required><label for="smsOptIn">I agree to receive SMS messages regarding my storage account only. I understand this consent is not for advertising or marketing messages.</label></div></div>
+
+<div class="full">
+<label>Address <span class="req">*</span></label>
+<div class="address-grid">
+<div><input id="streetNumber" name="streetNumber" type="text" placeholder="Street Number" required></div>
+<div><input id="streetName" name="streetName" type="text" placeholder="Street Name / Address" required></div>
+<div><input id="city" name="city" type="text" placeholder="City" required></div>
+<div><input id="state" name="state" type="text" maxlength="2" placeholder="State" required></div>
+</div>
+<div class="three" style="margin-top:16px;"><div><input id="zip" name="zip" type="text" inputmode="numeric" maxlength="10" placeholder="ZIP Code" required></div><div></div><div></div></div>
+</div>
+
+<div class="full section">Supporting documents</div>
+<div class="full"><div class="check-row"><input id="hasTitle" name="hasTitle" type="checkbox" value="Yes"><label for="hasTitle">I have the title available. If selected, the title and insurance uploads will be required. If not selected, registration and insurance will be required instead.</label></div></div>
+<div class="full upload-card"><label for="titlePdf">Vehicle / Trailer / Boat Title (PDF) <span class="req" id="titleReqMark">*</span></label><input id="titlePdf" name="titlePdf" type="file" accept="application/pdf"><div class="help">Upload a clear PDF copy of the title when available.</div></div>
+<div class="full upload-card"><label for="registrationPdf">Registration (PDF) <span class="req" id="registrationReqMark">*</span></label><input id="registrationPdf" name="registrationPdf" type="file" accept="application/pdf"><div class="help">Required when title is not available.</div></div>
+<div class="full upload-card"><label for="insurancePdf">Insurance (PDF) <span class="req">*</span></label><input id="insurancePdf" name="insurancePdf" type="file" accept="application/pdf" required><div class="help">Upload a clear PDF copy of current insurance.</div></div>
+<div class="full upload-card"><label for="vehiclePhoto">Optional Photo of Stored Property</label><input id="vehiclePhoto" name="vehiclePhoto" type="file" accept="image/*"><div class="help">If uploaded, please take the photo from the front and include the license plate when possible. For trailers or boats, include a clear identifying view.</div></div>
+<div class="full"><div class="check-row"><input id="nameMatchAttestation" name="nameMatchAttestation" type="checkbox" value="Yes" required><label for="nameMatchAttestation">I understand the names on the registration, title, and insurance must match the renter information provided. If they do not match, the rental cannot be completed legally until corrected.</label></div></div>
+
+<div class="full section">Signature and certification</div>
+<div class="full"><div class="legal-box">By signing and submitting this form, I certify under penalty of falsification that the information I entered is true and correct to the best of my knowledge, that I am the registered owner of the property to be stored, and that the documents uploaded are submitted for use in completing my TSSA Vehicle, Trailer, or Boat Self-Storage Rental Agreement and related storage intake requirements.</div></div>
+<div class="full"><label>Draw Signature <span class="req">*</span></label><div class="signature-pad-wrap"><canvas id="signaturePad" class="signature-pad"></canvas><input type="hidden" id="drawnSignature" name="drawnSignature"><div class="sig-actions"><div class="sig-note">Sign above, then type your full legal name below.</div><button type="button" class="btn-secondary" id="clearSignature">Clear Signature</button></div></div></div>
+<div><label for="typedSignature">Type Full Legal Name <span class="req">*</span></label><input id="typedSignature" name="typedSignature" type="text" required></div>
+<div><label for="signatureDate">Signature Date <span class="req">*</span></label><input id="signatureDate" name="signatureDate" type="date" required></div>
+<div class="full"><div class="check-row"><input id="accuracyCertification" name="accuracyCertification" type="checkbox" value="Yes" required><label for="accuracyCertification">I certify that all information entered is accurate and that the information and documents supplied may be used to complete my TSSA Vehicle, Trailer, or Boat Self-Storage Rental Agreement.</label></div></div>
+</div>
+
+<div class="actions"><button type="reset" class="btn-secondary">Clear Form</button><button type="submit" class="btn-primary" id="submitBtn">Send Storage Information</button></div>
+</form>
+
+<div id="status" class="status"></div>
+</div>
+
+<div class="legal"><strong>Document handling notice:</strong> This form is designed as an intake request for required vehicle, trailer, or boat storage information. A matching backend will be needed to securely receive the uploads, store the submitted files, and route copies to the office.</div>
+</div>
+
+<div class="footer">
+Aldine Storage | 21667 Aldine Westfield Rd, Humble, TX 77338<br>
+Phone: (281) 233-0400 | Email: aldine@rightmovestorage.com<br>
+www.rightmovestorage.com<br><br>
+© 2026 Right Move Storage. Form created, developed, and maintained by That Tech Guy.
+<img class="footer-logo" alt="That Tech Guy" src="https://res.cloudinary.com/mytechguy/image/upload/v1574277803/TTG_Logo_hamnbu.jpg">
+</div></div>
+
+<div class="modal-backdrop" id="confirmModal"><div class="modal"><div class="modal-head"><strong>Ready to send?</strong></div><div class="modal-body">This request should only be sent when your information and required documents are ready. If you are not the registered owner, or if the required documents do not support the rental, the office will be unable to complete the storage rental.</div><div class="modal-actions"><button type="button" class="btn-secondary" id="cancelSend">Cancel</button><button type="button" class="btn-primary" id="confirmSend">Yes, Send Request</button></div></div></div>
+<iframe id="submissionFrame" name="submissionFrame" style="display:none;width:0;height:0;border:0;" tabindex="-1" aria-hidden="true"></iframe>
+
+<script>
+const WEB_APP_URL = 'REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_WEB_APP_URL';
+const form = document.getElementById('vehicleStorageForm'), statusBox = document.getElementById('status'), modal = document.getElementById('confirmModal'), cancelSend = document.getElementById('cancelSend'), confirmSend = document.getElementById('confirmSend'), submitBtn = document.getElementById('submitBtn'), ownerNo = document.getElementById('ownerNo'), ownerBlockNotice = document.getElementById('ownerBlockNotice'), hasTitle = document.getElementById('hasTitle'), titlePdf = document.getElementById('titlePdf'), registrationPdf = document.getElementById('registrationPdf'), insurancePdf = document.getElementById('insurancePdf'), titleReqMark = document.getElementById('titleReqMark'), registrationReqMark = document.getElementById('registrationReqMark'), mobileNumber = document.getElementById('mobileNumber'), stateInput = document.getElementById('state'), licenseStateInput = document.getElementById('licenseState'), middleInitial = document.getElementById('middleInitial'), zipInput = document.getElementById('zip');
+const typeVehicleCard = document.getElementById('typeVehicleCard'), typeTrailerCard = document.getElementById('typeTrailerCard'), typeBoatCard = document.getElementById('typeBoatCard');
+const canvas = document.getElementById('signaturePad'), ctx = canvas.getContext('2d'); let drawing = false, hasSignature = false, pendingSubmit = false, submitTimeoutId = null;
+
+function updateStoredTypeCards(){ const selected = document.querySelector('input[name="storedItemType"]:checked').value; typeVehicleCard.classList.toggle('active', selected === 'Vehicle'); typeTrailerCard.classList.toggle('active', selected === 'Trailer'); typeBoatCard.classList.toggle('active', selected === 'Boat'); }
+function showStatus(type,msg){ if(!msg){statusBox.className='status';statusBox.textContent='';return;} statusBox.className='status '+type; statusBox.textContent=msg; }
+function formatPhoneValue(value){ const digits=String(value||'').replace(/\D/g,'').slice(0,10); if(!digits) return ''; if(digits.length<4) return '('+digits; if(digits.length<7) return '('+digits.slice(0,3)+')'+digits.slice(3); return '('+digits.slice(0,3)+')'+digits.slice(3,6)+'-'+digits.slice(6);}
+function phoneValid(value){ return /^\(\d{3}\)\d{3}-\d{4}$/.test(String(value||'')); }
+function setDocumentRequirements(){ if(hasTitle.checked){ titlePdf.required=true; registrationPdf.required=false; titleReqMark.classList.remove('hidden'); registrationReqMark.classList.add('hidden'); } else { titlePdf.required=false; registrationPdf.required=true; titleReqMark.classList.add('hidden'); registrationReqMark.classList.remove('hidden'); } }
+function setOwnerBlock(){ const blocked = ownerNo.checked; ownerBlockNotice.classList.toggle('hidden', !blocked); submitBtn.disabled = blocked; }
+function upperTwo(el){ el.addEventListener('input', function(){ this.value = this.value.replace(/[^A-Za-z]/g,'').toUpperCase().slice(0,2); }); }
+function resizeCanvas(){ const ratio=Math.max(window.devicePixelRatio||1,1); const rect=canvas.getBoundingClientRect(); canvas.width=rect.width*ratio; canvas.height=rect.height*ratio; ctx.setTransform(ratio,0,0,ratio,0,0); ctx.lineWidth=2; ctx.lineCap='round'; ctx.strokeStyle='#111827'; if(!hasSignature) ctx.clearRect(0,0,canvas.width,canvas.height); }
+function startDraw(x,y){ drawing=true; ctx.beginPath(); ctx.moveTo(x,y); } function draw(x,y){ if(!drawing) return; ctx.lineTo(x,y); ctx.stroke(); hasSignature=true; } function endDraw(){ drawing=false; } function pointFromEvent(e){ const rect=canvas.getBoundingClientRect(); if(e.touches&&e.touches[0]) return {x:e.touches[0].clientX-rect.left,y:e.touches[0].clientY-rect.top}; return {x:e.clientX-rect.left,y:e.clientY-rect.top}; }
+function zipValid(value){ return /^\d{5}(?:-\d{4})?$/.test(String(value||'')); }
+function fileIsPdf(input){ if(!input.files||!input.files.length) return false; const f=input.files[0]; return f.type==='application/pdf'||/\.pdf$/i.test(f.name); }
+function validateClient(){ if(ownerNo.checked) return 'This form cannot be completed legally unless you are the registered owner. Please contact the office.'; if(!phoneValid(mobileNumber.value)) return 'Mobile number must be entered like (281)233-0400.'; if(!/^[A-Z]{2}$/.test(licenseStateInput.value)) return 'License State must be two letters.'; if(!/^[A-Z]{2}$/.test(stateInput.value)) return 'Address State must be two letters.'; if(!zipValid(zipInput.value)) return 'ZIP Code must be valid.'; if(!hasSignature) return 'Please draw your signature before submitting.'; if(!fileIsPdf(insurancePdf)) return 'Insurance upload must be a PDF.'; if(hasTitle.checked){ if(!fileIsPdf(titlePdf)) return 'Title upload must be a PDF when title is available.'; } else { if(!fileIsPdf(registrationPdf)) return 'Registration upload must be a PDF when title is not available.'; } return ''; }
+function fileToBase64(file){ return new Promise((resolve,reject)=>{ const reader=new FileReader(); reader.onload=()=>resolve(String(reader.result||'')); reader.onerror=()=>reject(new Error('Unable to read file.')); reader.readAsDataURL(file); }); }
+async function collectPayload(){ const fd=new FormData(form), payload=Object.fromEntries(fd.entries()); payload.drawnSignature = hasSignature ? canvas.toDataURL('image/png') : ''; payload.formType='Vehicle Trailer Boat Storage Intake'; payload.fullName=[payload.firstName||'',payload.middleInitial||'',payload.lastName||''].join(' ').replace(/\s+/g,' ').trim(); payload.titlePdfBase64=titlePdf.files&&titlePdf.files[0]?await fileToBase64(titlePdf.files[0]):''; payload.titlePdfName=titlePdf.files&&titlePdf.files[0]?titlePdf.files[0].name:''; payload.registrationPdfBase64=registrationPdf.files&&registrationPdf.files[0]?await fileToBase64(registrationPdf.files[0]):''; payload.registrationPdfName=registrationPdf.files&&registrationPdf.files[0]?registrationPdf.files[0].name:''; payload.insurancePdfBase64=insurancePdf.files&&insurancePdf.files[0]?await fileToBase64(insurancePdf.files[0]):''; payload.insurancePdfName=insurancePdf.files&&insurancePdf.files[0]?insurancePdf.files[0].name:''; const photo=document.getElementById('vehiclePhoto'); payload.vehiclePhotoBase64=photo.files&&photo.files[0]?await fileToBase64(photo.files[0]):''; payload.vehiclePhotoName=photo.files&&photo.files[0]?photo.files[0].name:''; return payload; }
+function sendPayload(payload){ showStatus('',''); if(!WEB_APP_URL||WEB_APP_URL.includes('REPLACE_WITH_YOUR_DEPLOYED_APPS_SCRIPT_WEB_APP_URL')){ showStatus('err','Replace WEB_APP_URL in the HTML with your deployed Apps Script Web App URL before using this form.'); return; } const iframe=document.getElementById('submissionFrame'); const tempForm=document.createElement('form'); tempForm.method='POST'; tempForm.action=WEB_APP_URL; tempForm.target='submissionFrame'; tempForm.style.display='none'; Object.entries(payload).forEach(function(entry){ const input=document.createElement('input'); input.type='hidden'; input.name=entry[0]; input.value=entry[1]==null?'':String(entry[1]); tempForm.appendChild(input); }); pendingSubmit=true; showStatus('ok','Submitting your request now. Please wait...'); document.body.appendChild(tempForm); tempForm.submit(); iframe.onload=function(){ if(!pendingSubmit) return; pendingSubmit=false; window.clearTimeout(submitTimeoutId); showStatus('ok','Request submitted successfully. A matching backend is needed to securely process the uploads and generate final office copies.'); form.reset(); ctx.clearRect(0,0,canvas.width,canvas.height); hasSignature=false; setDocumentRequirements(); setOwnerBlock(); updateStoredTypeCards(); document.getElementById('signatureDate').valueAsDate=new Date(); if(tempForm.parentNode) tempForm.parentNode.removeChild(tempForm); }; submitTimeoutId=window.setTimeout(function(){ if(!pendingSubmit) return; pendingSubmit=false; showStatus('err','Submission timed out. Verify the Apps Script web app is deployed and accessible to Anyone, then try again.'); if(tempForm.parentNode) tempForm.parentNode.removeChild(tempForm); },30000); }
+form.addEventListener('submit', async function(e){ e.preventDefault(); const issue=validateClient(); if(issue){ showStatus('err',issue); return; } modal.style.display='flex'; });
+cancelSend.addEventListener('click', function(){ modal.style.display='none'; showStatus('err','Submission cancelled.'); });
+confirmSend.addEventListener('click', async function(){ modal.style.display='none'; try{ const payload=await collectPayload(); sendPayload(payload); } catch(err){ showStatus('err', err&&err.message?err.message:'Unable to prepare submission.'); }});
+window.addEventListener('click', function(e){ if(e.target===modal) modal.style.display='none'; });
+document.querySelectorAll('input[name="storedItemType"]').forEach(function(r){ r.addEventListener('change', updateStoredTypeCards); });
+document.getElementById('ownerYes').addEventListener('change', setOwnerBlock); ownerNo.addEventListener('change', setOwnerBlock); hasTitle.addEventListener('change', setDocumentRequirements);
+mobileNumber.addEventListener('input', function(){ this.value=formatPhoneValue(this.value); }); mobileNumber.addEventListener('blur', function(){ this.value=formatPhoneValue(this.value); });
+middleInitial.addEventListener('input', function(){ this.value=this.value.replace(/[^A-Za-z]/g,'').toUpperCase().slice(0,1); }); zipInput.addEventListener('input', function(){ this.value=this.value.replace(/[^\d-]/g,'').slice(0,10); }); upperTwo(stateInput); upperTwo(licenseStateInput);
+document.getElementById('clearSignature').addEventListener('click', function(){ ctx.clearRect(0,0,canvas.width,canvas.height); hasSignature=false; });
+canvas.addEventListener('mousedown', function(e){ const p=pointFromEvent(e); startDraw(p.x,p.y); }); canvas.addEventListener('mousemove', function(e){ const p=pointFromEvent(e); draw(p.x,p.y); }); window.addEventListener('mouseup', endDraw); canvas.addEventListener('mouseleave', endDraw);
+canvas.addEventListener('touchstart', function(e){ e.preventDefault(); const p=pointFromEvent(e); startDraw(p.x,p.y); }, {passive:false}); canvas.addEventListener('touchmove', function(e){ e.preventDefault(); const p=pointFromEvent(e); draw(p.x,p.y); }, {passive:false}); canvas.addEventListener('touchend', function(e){ e.preventDefault(); endDraw(); }, {passive:false});
+form.addEventListener('reset', function(){ window.setTimeout(function(){ showStatus('',''); setDocumentRequirements(); setOwnerBlock(); updateStoredTypeCards(); document.getElementById('signatureDate').valueAsDate=new Date(); },0); });
+document.getElementById('signatureDate').valueAsDate=new Date(); setDocumentRequirements(); setOwnerBlock(); updateStoredTypeCards(); window.addEventListener('resize', resizeCanvas); resizeCanvas();
+</script>
+</body></html>
